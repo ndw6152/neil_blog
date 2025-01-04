@@ -19,6 +19,10 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.scss$/, // Handle SCSS files
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ],
   },
   resolve: {
@@ -33,5 +37,6 @@ module.exports = {
     static: './dist',
     port: 3000,
   },
+  devtool: 'source-map',
   mode: 'development',
 };

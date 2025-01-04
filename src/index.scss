@@ -1,0 +1,12 @@
+// Reset default margins and paddings
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// React root fills the available space
+#root {
+  height: 100%;
+  width: 100%;
+}
