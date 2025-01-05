@@ -1,0 +1,46 @@
+.primary {
+  background-color: var(--primary-color);
+  color: var(--secondary10-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    background-color: var(--primary30-color);
+  }
+  &:active {
+    background-color: var(--primary40-color);
+  }
+}
+
+.secondary {
+  background-color: var(--secondary10-color);
+  color: var(--primary-color);
+  border: solid 2px var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    background-color: var(--secondary15-color);
+  }
+  &:active {
+    background-color: var(--secondary20-color);
+  }
+}
+
+.tertiary {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  color: var(--tertiary10-color);
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    color: var(--tertiary20-color);
+  }
+  &:active {
+    color: var(--tertiary30-color);
+  }
+}

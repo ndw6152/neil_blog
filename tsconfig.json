@@ -1,15 +1,16 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "ESNext",
-      "jsx": "react-jsx",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "moduleResolution": "node",
-      "outDir": "./dist",
-      "sourceMap": true
-    },
-    "include": ["src"]
-  }
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "sourceMap": true,
+    "typeRoots": ["./node_modules/@types", "./types"]
+  },
+  "include": ["src", "globals.d.ts"]
+}

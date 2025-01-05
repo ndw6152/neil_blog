@@ -1,75 +1,51 @@
 import './index.scss';
 
 import React from 'react';
-import PrimaryButton from './PrimaryButton';
-import SecondaryButton from './SecondaryButton';
+import { Button, ButtonVariant } from './Button';
 import { useTheme } from './contexts/ThemeContext';
+import styles from './App.module.scss';
 
 const App: React.FC = () => {
-  const { theme, themeConfig, toggleTheme, typography, spacing } = useTheme();
+  const { theme, themeConfig, toggleTheme, typography } = useTheme();
 
   return (
-    <div
-      className="app-container"
-      style={{
-        width: '100vw',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        backgroundColor: themeConfig.secondary10, // Example background change for theme
-      }}
-    >
+    <div className={styles.appContainer}>
       {/* Header */}
-      <header
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: spacing.s20,
-          backgroundColor: themeConfig.secondary15,
-        }}
-      >
-        <text
+      <header className={styles.header}>
+        <div
           style={{
             color: themeConfig.tertiary10,
             fontSize: typography.h1,
           }}
         >
-          Hello World
-        </text>
-        <PrimaryButton title={theme} onClick={toggleTheme} />
+          Neil D. WHC
+        </div>
+        <Button
+          title={theme}
+          onClick={toggleTheme}
+          variant={ButtonVariant.Primary}
+        />
       </header>
 
       {/* Main content container */}
-      <div className="container" style={{ textAlign: 'center', flex: 1 }}>
-        <text
+      <div className={styles.mainContainer}>
+        <div
           style={{ color: themeConfig.tertiary20, fontSize: typography.body }}
         >
           Hello, React with TypeScript and Webpack!
-        </text>
-
-        <SecondaryButton title="Secondary" onClick={toggleTheme} />
+        </div>
       </div>
 
       {/* Footer */}
-      <footer
-        style={{
-          textAlign: 'center',
-          paddingTop: '10px',
-          paddingBottom: '10px',
-          backgroundColor: themeConfig.secondary15,
-        }}
-      >
-        <text
+      <footer className={styles.footer}>
+        <div
           style={{
             color: themeConfig.tertiary20,
             fontSize: typography.subtitle,
           }}
         >
           Footer content goes here.
-        </text>
+        </div>
       </footer>
     </div>
   );

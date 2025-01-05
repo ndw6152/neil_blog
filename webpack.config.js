@@ -16,12 +16,33 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.module\.scss$/, // Handle SCSS modules (files ending with .module.scss)
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                namedExport: false,
+                exportLocalsConvention: 'as-is',
+              },
+            },
+          },
+          'sass-loader',
+        ],
       },
       {
-        test: /\.scss$/, // Handle SCSS files
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.scss$/, // Handle global SCSS files (not modules)
+        exclude: /\.module\.scss$/, // Exclude .module.scss files
+        use: [
+          'style-loader',
+          'css-loader', // No modules option here
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
