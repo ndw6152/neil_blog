@@ -56,6 +56,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      inject: 'body', // Inject JS files into the body (default behavior)
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css', // Output CSS file name with content hash
@@ -72,11 +73,14 @@ module.exports = {
       chunks: 'all', // Split dependencies into separate chunks
       maxInitialRequests: 5, // Control number of initial requests
       minSize: 0, // Prevent the creation of small bundles
+      maxSize: 100000, // Set a max size for chunks, if needed
     },
   },
   devServer: {
+    historyApiFallback: true, // Fallback to index.html for all routes
     static: './dist',
     port: 3000,
+    open: true, // Optionally open the browser automatically
   },
   devtool: buildMode === 'production' ? 'source-map' : 'eval-source-map', // Use different source maps depending on mode
   mode: buildMode,
