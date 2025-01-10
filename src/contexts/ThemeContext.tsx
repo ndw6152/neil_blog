@@ -39,25 +39,25 @@ const themeConfig: Record<Theme, ThemeConfig> = {
     primary: 'hsl(210, 80%, 20%)', // use for button
     primary30: 'hsl(210, 80%, 30%)', // use for button hover
     primary40: 'hsl(210, 80%, 40%)', // use for button hover
-    secondary10: 'hsl(150, 50%, 90%)', // use for background
-    secondary15: 'hsl(150, 50%, 75%)',
-    secondary20: 'hsl(150, 50%, 80%)',
-    tertiary10: 'hsl(150, 50%, 10%)', // use for text
-    tertiary20: 'hsl(150, 50%, 20%)',
-    tertiary30: 'hsl(150, 50%, 30%)',
-    accent: 'hsl(90, 80%, 20%)',
+    secondary10: 'hsl(234, 20%, 90%)', // use for background
+    secondary15: 'hsl(234, 20%, 75%)',
+    secondary20: 'hsl(234, 20%, 80%)',
+    tertiary10: 'hsl(230, 50%, 10%)', // use for text
+    tertiary20: 'hsl(230, 50%, 20%)',
+    tertiary30: 'hsl(230, 50%, 30%)',
+    accent: 'hsl(260, 75%, 20%)',
   },
   dark: {
     primary: 'hsl(210, 80%, 80%)',
     primary30: 'hsl(210, 80%, 70%)',
     primary40: 'hsl(210, 80%, 60%)', // use for button hover
-    secondary10: 'hsl(150, 50%, 10%)',
-    secondary15: 'hsl(150, 50%, 15%)',
-    secondary20: 'hsl(150, 50%, 20%)',
-    tertiary10: 'hsl(150, 50%, 90%)',
-    tertiary20: 'hsl(150, 50%, 80%)',
-    tertiary30: 'hsl(150, 50%, 70%)',
-    accent: 'hsl(90, 80%, 80%)',
+    secondary10: 'hsl(234, 20%, 10%)',
+    secondary15: 'hsl(234, 20%, 15%)',
+    secondary20: 'hsl(234, 20%, 20%)',
+    tertiary10: 'hsl(230, 50%, 90%)',
+    tertiary20: 'hsl(230, 50%, 80%)',
+    tertiary30: 'hsl(230, 50%, 70%)',
+    accent: 'hsl(260, 75%, 80%)',
   },
 };
 

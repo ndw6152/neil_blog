@@ -6,9 +6,12 @@ import { useTheme } from './contexts/ThemeContext';
 import styles from './App.module.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { NavBar, RouteConfig } from './NavBar';
+import buttonStyles from './Button.module.scss';
+
+import Toggle from './assets/toggle.svg';
 
 const App: React.FC = () => {
-  const { theme, themeConfig, toggleTheme, typography } = useTheme();
+  const { themeConfig, toggleTheme, typography } = useTheme();
 
   return (
     <BrowserRouter>
@@ -26,10 +29,12 @@ const App: React.FC = () => {
 
           <NavBar />
 
-          <Button
-            title={theme}
+          <Toggle
+            className={buttonStyles.tertiary}
             onClick={toggleTheme}
-            variant={ButtonVariant.Primary}
+            width={30}
+            height={30}
+            fill={themeConfig.tertiary10}
           />
         </header>
 
